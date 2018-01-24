@@ -128,7 +128,7 @@ fn keysequence<'a>(key: Key) -> Cow<'a, str> {
     }
     Cow::from(match key {
         Key::Alt => "Alt",
-        Key::Backspace => "Backspace",
+        Key::Backspace => "BackSpace",
         Key::CapsLock => "CapsLock",
         Key::Command => "Command",
         Key::Control => "Control",
