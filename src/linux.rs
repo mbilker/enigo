@@ -173,19 +173,19 @@ impl KeyboardControllable for Enigo {
     fn key_down(&mut self, key: Key) {
         let string = CString::new(&*keysequence(key)).unwrap();
         unsafe {
-            xdo_send_keysequence_window_down(self.xdo, CURRENT_WINDOW, string.as_ptr(), 12000);
+            xdo_send_keysequence_window_down(self.xdo, CURRENT_WINDOW, string.as_ptr(), 0);
         }
     }
     fn key_up(&mut self, key: Key) {
         let string = CString::new(&*keysequence(key)).unwrap();
         unsafe {
-            xdo_send_keysequence_window_up(self.xdo, CURRENT_WINDOW, string.as_ptr(), 12000);
+            xdo_send_keysequence_window_up(self.xdo, CURRENT_WINDOW, string.as_ptr(), 0);
         }
     }
     fn key_click(&mut self, key: Key) {
         let string = CString::new(&*keysequence(key)).unwrap();
         unsafe {
-            xdo_send_keysequence_window(self.xdo, CURRENT_WINDOW, string.as_ptr(), 12000);
+            xdo_send_keysequence_window(self.xdo, CURRENT_WINDOW, string.as_ptr(), 0);
         }
     }
 }
