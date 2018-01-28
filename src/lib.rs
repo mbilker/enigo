@@ -243,7 +243,7 @@ pub trait MouseControllable {
 
 /// Keys to be used TODO(dustin): make real documentation
 #[cfg_attr(feature = "with_serde", derive(Serialize, Deserialize))]
-#[derive(Debug)]
+#[derive(Debug, Clone, Copy, PartialEq)]
 pub enum Key {
     /// return key
     Return,
